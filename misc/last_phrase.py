@@ -32,7 +32,7 @@ engine.register("phrase", on_phrase)
 template = """
 <style type="text/css">
 body {
-    width: 400px;
+    width: 300px;
     padding: 0;
     margin: 0;
 }

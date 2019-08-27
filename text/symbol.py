@@ -8,9 +8,9 @@ keymap = {
     "plus": "+",
     "tilde": "~",
     "(bang | exclamation point | clamor)": "!",
-    "(dollar [sign] | dolly)": "$",
-    "(downscore | crunder)": "_",
-    "colon": ":",
+    "(doll | dollar [sign] | dolly)": "$",
+    "(under score | downscore | crunder)": "_",
+    "(colon | cold | coal)": ":",
     "(lparen | [left] paren | precorp )": "(",
     "(rparen | are paren | right paren | precose)": ")",
     "(brace | left brace | kirksorp)": "{",
@@ -22,9 +22,9 @@ keymap = {
     "percent [sign]": "%",
     "caret": "^",
     "at sign": "@",
-    "(and sign | ampersand | amper)": "&",
+    "(and sign | ampersand | amper | amp)": "&",
     "(pipe | spike)": "|",
-    "(dubquote | double quote | quatches)": '"',
+    "(dubquote | double quote | dub | dub dub)": '"',
     # compound
     "mintwice": "--",
     "plustwice": "++",
@@ -34,9 +34,9 @@ keymap = {
     "triple quote": "'''",
     "triple tick": "```",
     "[forward] dubslash": "//",
-    "coal twice": "::",
+    "coal two": "::",
     "(dot dot | dotdot)": "..",
-    "(ellipsis | dot dot dot | dotdotdot)": "...",
+    "(ellipse | eclipse | ellipsis | dot dot dot | dotdotdot | triple dot)": "...",
     # unnecessary: use repetition commands?
 }
 

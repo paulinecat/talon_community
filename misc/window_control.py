@@ -31,8 +31,10 @@ ctx.keymap(
         "close window": Key("cmd-shift-w"),
         "([switch] window (next | right) | gibby)": Key("cmd-`"),
         "([switch] window (left | previous | preev) | shibby)": Key("cmd-shift-`"),
-        "[switch] space (right | next)": Key("ctrl-right"),
-        "[switch] space (left | previous | preev)": Key("ctrl-left"),
+        "move (preev | left)": Key("ctrl-cmd-alt-shift-left"),
+        "move (next | right)": Key("ctrl-cmd-alt-shift-right"),
+        "[switch] space (right | next)": Key("ctrl-alt-shift-right"),
+        "[switch] space (left | previous | preev)": Key("ctrl-alt-shift-left"),
         "(minimise window | curtail)": Key("cmd-m"),
         "([show] (app | application) windows | expozay)": lambda m: macos.dock_notify(
             "com.apple.expose.front.awake"

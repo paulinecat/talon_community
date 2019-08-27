@@ -18,6 +18,7 @@ ctx.keymap(
         # git commands originally from std.py
         # git commands originally from terminal.py
         # PREFIX + "[<dgndictation>]": ["git ", text],
+        PREFIX: ["git "],
         PREFIX + "add [<dgndictation>]": ["git add ", text],
         PREFIX + "add partial [<dgndictation>]": ["git add -p ", text],
         PREFIX + "bisect": "git bisect ",
@@ -30,8 +31,10 @@ ctx.keymap(
         PREFIX + "branch delete [<dgndictation>]": ["git branch -D ", text],
         PREFIX + "branch all [<dgndictation>]": ["git branch -a ", text],
         PREFIX + "clone [<dgndictation>]": ["git clone ", text],
-        PREFIX + "checkout master": "git checkout master",
+        PREFIX + "( checkout master | CM )": "git checkout master",
+        PREFIX + "( checkout develop | CD )": "git checkout develop",
         PREFIX + "checkout [<dgndictation>]": ["git checkout ", text],
+        PREFIX + "clear all": ["git checkout ."],
         PREFIX + "checkout branch [<dgndictation>]": ["git checkout -B ", text],
         PREFIX + "cherry pick [<dgndictation>]": ["git cherry-pick ", text],
         PREFIX + "commit [<dgndictation>]": ['git commit -m ""', Key("left"), text],
@@ -54,6 +57,7 @@ ctx.keymap(
         PREFIX + "grep": "git grep ",
         PREFIX + "(in it | init | initialize)": "git init ",
         PREFIX + "log": "git log ",
+        PREFIX + "log one line": "git log --oneline",
         PREFIX + "merge [<dgndictation>]": ["git merge ", text],
         PREFIX + "move [<dgndictation>]": ["git mv ", text],
         PREFIX + "pull [<dgndictation>]": ["git pull ", text],
@@ -63,9 +67,9 @@ ctx.keymap(
             text,
         ],
         PREFIX + "push [<dgndictation>]": ["git push ", text],
-        PREFIX + "push force [<dgndictation>]": ["git push --force ", text],
+        PREFIX + "push force hard [<dgndictation>]": ["git push --force ", text],
         PREFIX
-        + "push force lease [<dgndictation>]": ["git push --force-with-lease ", text],
+        + "(push force | PF)": ["git push --force-with-lease ", text],
         PREFIX
         + "push set up stream [<dgndictation>]": ["git push --set-upstream ", text],
         PREFIX + "push set up new branch": "git push --set-upstream origin HEAD",

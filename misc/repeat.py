@@ -45,8 +45,8 @@ ctx.keymap(
         "creek": RepPhrase(1),
         "soup": Rep(2 + offset),
         "trace": Rep(3 + offset),
-        "quarr": Rep(4 + offset),
-        "fypes": Rep(5 + offset),
+        "core": Rep(4 + offset),
+        "fights": Rep(5 + offset),
         "(repeat | repple)" + utils.numerals: repeat,
     }
 )

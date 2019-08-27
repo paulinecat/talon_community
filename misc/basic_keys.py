@@ -4,7 +4,7 @@ from ..utils import normalise_keys, insert
 from ..config import config
 
 # Alphabet words are configurable in your config.json.  default is talon_alphabet_words:
-talon_alphabet_words = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip"
+talon_alphabet_words = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest wave ax yank zip"
 # voicecode_alphabet_words: "arch brov char dell etch fomp goof hark ice jinx koop lug mowsh nerb ork pooch quosh rosh sun teak unks verge womp trex yang zooch"
 
 alpha_alt = config.get("alphabet_words", talon_alphabet_words).split()
@@ -15,20 +15,16 @@ f_keys = {f"F {i}": f"f{i}" for i in range(1, 13)}
 
 simple_keys = normalise_keys(
     {
-        "(crimp | lloyd)": "left",
-        "chris": "right",
-        "jeep": "up",
-        "( dune | doom )": "down",
+        "(left | el | well | L)": "left",
+        "(right | are | arr | ar | R)": "right",
+        "( jeep | up )": "up",
+        "( dune | doom | down )": "down",
         "( backspace | junk )": "backspace",
         "(delete | forward delete | scrap | spunk)": "delete",
         "(space | skoosh)": "space",
-        "(tab | tarp)": "tab",
-        "( enter | shock )": "enter",
-        "( escape | randall )": "escape",
-        "home": "home",
-        "pagedown": "pagedown",
-        "pageup": "pageup",
-        "end": "end",
+        "(tap | tab | tarp)": "tab",
+        "( yeah | enter | shock )": "enter",
+        "( escape | cape )": "escape",
     }
 )
 
@@ -42,7 +38,7 @@ symbols = normalise_keys(
         "(comma | ,)": ",",
         "(dot | period)": ".",
         "(semicolon | semi)": ";",
-        "(quote | quatchet)": "'",
+        "quote": "'",
         "(square | L square | left square | left square bracket)": "[",
         "(R square | right square | right square bracket)": "]",
         "(slash | forward slash)": "/",
@@ -54,7 +50,7 @@ symbols = normalise_keys(
 
 modifiers = normalise_keys(
     {
-        "command": "cmd",
+        "cam": "cmd",
         "(control | troll)": "ctrl",
         "(shift | sky)": "shift",
         "(alt | option)": "alt",
@@ -128,8 +124,7 @@ ctx.keymap(
         "{basic_keys.modifiers}* {basic_keys.keys}+": press_keys,
         "(go | {basic_keys.modifiers}+) {basic_keys.arrows}+": press_keys,
         "number {basic_keys.digits}+ [over]": press_keys,
-        "tarsh": Key("shift-tab"),
-        "tarpy": [Key("tab"), Key("tab")],
+        "(tappy | tabby | tarpy)": Key("shift-tab"),
     }
 )
 ctx.set_list("alphabet", alphabet.keys())
