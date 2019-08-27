@@ -11,20 +11,25 @@ keymap = {
     "pane next": Key("cmd-]"),
     "pane last": Key("cmd-["),
 
-    # Vim commands
-    "save it": Key("escape : w enter"),
-    "new [(lie | line)]": Key( "escape o" ),
-    "new up [(lie | line)]": Key( "escape O"),
-    "undo": Key( "escape u"),
+    # Vim
+    # editing
+    "now save": Key("escape : w enter"),
+    "now quit": Key("escape : q ! enter"),
+    "new line": Key( "escape o" ),
+    "new line up": Key( "escape O"),
+    "paste line": Key("escape p"),
+    "paste line up": Key("escape P"),
+    "now undo": Key( "escape u"),
     "super undo": Key("ctrl-r"),
-    "(eye | before)": Key("escape i"),
-    "after": Key("escape a"),
-    "say eye": Key("escape I"),
-    "say ay": Key("escape A"),
-    "change [word]": Key("escape d w i"),
+    "now (eye | before)": Key("escape i"),
+    "now after": Key("escape a"),
+    "add to start": Key("escape I"),
+    "add to end": Key("escape A"),
+    "change word": Key("escape d w i"),
     "delete word": Key("escape d w"),
     "delete line": Key("escape d d"),
     "delete rest": Key("escape D"),
+    # navigating
     "( tarp | top | gg )": Key("g g"),
     "( bot | bottom | big G )": "G",
     "search": Key("escape /"),
@@ -35,23 +40,25 @@ keymap = {
     "now flooring": "w",
     "now end": "E",
     "now ending": "e",
-    "start": "^",
-    "end": "$",
-    "last": Key("escape ` ."),
-    "copy": Key("c p"),
+    "now start": "^",
+    "now end": "$",
+    "now last": Key("escape ` ."),
+    "now copy": Key("c p"),
+    # vim plugins
     "( prev | preev | previous | last) chunk": Key("[ c"),
     "next chunk": Key("] c"),
     "stage": Key("\\ h a"),
     "unstage": Key("\\ h r"),
-    "[quit] out": Key("escape : q ! enter"),
-    "paste": Key("escape p"),
-    "paste up": Key("escape P"),
-    
+
     # Terminal
     "clear line": Key("ctrl-u"),
+    "clear window": Key("cmd-k"),
     "now (end pee end | NPM )": "npm ",
     "now (end pee end | NPM ) run": "npm run ",
     "now (end pee end | NPM ) install": "npm install ",
+    "now (vim | edit)": "vim ",
+    "now (vim | edit) all": ["vim", Key("enter")],
+    "now (at | act)": ['ack -i ""', Key("left")],
 }
 
 ctx.keymap(keymap)

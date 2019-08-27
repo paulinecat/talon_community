@@ -19,10 +19,10 @@ EDITOR_BUNDLES = (
     "com.google.android.studio",
 )
 
-BROWSER_BUNDLES = ("org.mozilla.firefox", "com.google.Chrome")
+BROWSER_BUNDLES = ("org.mozilla.firefox", "com.google.Chrome", "com.brave.Browser")
 
 FILETYPE_SENSITIVE_BUNDLES = (
-    # *BROWSER_BUNDLES,
+    *BROWSER_BUNDLES,
     *EDITOR_BUNDLES,
     *TERMINAL_BUNDLES,
 )

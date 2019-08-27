@@ -137,11 +137,17 @@ ctx.keymap(
     {
         "sing <dgndictation> [over]": text,
         "say <dgndictation> [over]": sentence_text,
-        "(comma | ,) <dgndictation> [over]": [", ", spoken_text],
-        "period <dgndictation> [over]": [". ", sentence_text],
         "word <dgnwords>": word,
         "(%s)+ [<dgndictation>] [over]" % (" | ".join(formatters)): FormatText,
         # to match surrounder command + another command (i.e. not dgndictation)
         "(%s)+" % (" | ".join(surrounders)): FormatText,
+        # formatting text
+        "[dub] quote me": ['""', Key("left")],
+        "sing quote me": ["''", Key("left")],
+        "(bould | bold) me": ["**", Key("left")],
+        "super (bould | bold) me": ["****", Key("left")],
+        "(italic | eye tally) me": ["__", Key("left")],
+        "strike me": ["~~", Key("left")],
+        "(code | codify | code if eye) me": ["``", Key("left")],
     }
 )

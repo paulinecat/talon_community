@@ -42,12 +42,16 @@ ctx.keymap(
         "(op | logical | bitwise) (ex | exclusive) or equals": " ^= ",
         "[(op | logical | bitwise)] (left shift | shift left) equals": " <<= ",
         "[(op | logical | bitwise)] (right shift | shift right) equals": " >>= ",
-        "[op] (arrow | lambo)": " -> ",
-        "[op] fat (arrow | lambo)": " => ",
-        # Completed matchables
+        "[op] small (arrow | lambo)": " -> ",
+        "[op] (arrow | lambo)": " => ",
+        # Empty
         "empty (parens | call | prexy)": "()",
         "empty (dict | object)": "{}",
         "empty (array | brackers)": "[]",
+        # Inline
+        "code call": ["()", Key("left")],
+        "code hobby": ["{}", Key("left")],
+        "code array": ["[]", Key("left")],
         # Blocks
         "[brace] block": [" {}", Key("left enter enter up tab")],
         "[brace] next block": [
@@ -57,10 +61,6 @@ ctx.keymap(
         ],
         "(square | brax) block": ["[", Key("enter")],
         "(paren | prex) block": ["(", Key("enter")],
-        # Inline
-        "code call": ["()", Key("left")],
-        "code hobby": ["{}", Key("left")],
-        "code array": ["[]", Key("left")],
         # Combos
         "coalshock": [":", Key("enter")],
         "comshock": [",", Key("enter")],
@@ -72,20 +72,26 @@ ctx.keymap(
         "state (def | deaf | deft)": "def ",
         "state if": ["if ()", Key("left")],
         "state else if": [" else if ()", Key("left")],
+        "state else": " else ",
         "state while": ["while ()", Key("left")],
         "state for": ["for ()", Key("left")],
         "state switch": ["switch ()", Key("left")],
         "state case": ["case \nbreak;", Key("up")],
         # Other Keywords
-        "const": "const ",
-        "static": "static ",
         "tip pent": "int ",
         "tip (char | care)": "char ",
         "tip byte": "byte ",
         "tip float": "float ",
         "tip double": "double ",
+        "tip no": "null",
+        "tip bully": "boolean",
         # Comments
         "comment see": "// ",
         "comment py": "# ",
+        # Miscellaneous
+        "tip chase on": "json",
+        "tip (jsx | chase sx )": "jsx",
+        "tip chase": "js",
+        "tip pie" : "py",
     }
 )
