@@ -7,12 +7,14 @@ ctx = Context("1password", bundle="com.agilebits.onepassword4")
 
 ctx.keymap(
     {
-        "new login": Key("shift-cmd-n"),
-        "fill it": Key("alt-cmd-enter"),
-        "duplicate": Key("cmd-d"),
-        "edit": Key("cmd-e"),
-        "copy password": Key("shift-cmd-c"),
+        "pass new": Key("shift-cmd-n"),
+        "past duke": Key("cmd-d"),
+        "pass edit": Key("cmd-e"),
+        "pass copy": Key("shift-cmd-c"),
         "[show] next category": Key("cmd-}"),
         "[show] (preev | previous) category": Key("cmd-{"),
     }
 )
+
+global_password = Context("1password")
+global_password.keymap({"pass fill": Key("shift-ctrl-alt-/")})

@@ -12,11 +12,14 @@ ctx = Context("emoji", func=is_in_bundles(EMOJI_BUNDLES))
 
 emojis = normalise_keys(
     {
+        "smile": ":slightly_smiling_face:",
+        "frown": ":slightly_frowning_face:",
+        "cool sun": ":sunglasses:",
+        "hands up": ":raised_hands:",
         "thumbs up": ":+1:",
         "(okay hand | okay)": ":ok_hand:",
-        "check": ":white_check_mark:",
-        "crossed fingers": ":crossed_fingers:",
-        "fingers": ":crossed_fingers:",
+        "(approved | prooved | proove)": ":white_check_mark:",
+        "[crossed] fingers": ":crossed_fingers:",
         "pray": ":pray:",
         "shrug": lambda x: paste_text(r"¯\_(ツ)_/¯"),
     }
@@ -48,7 +51,7 @@ def react(m):
 
 
 keymap = {
-    "emo {}".format(name): representation for name, representation in emojis.items()
+    "face {}".format(name): representation for name, representation in emojis.items()
 }
 keymap.update(
     {

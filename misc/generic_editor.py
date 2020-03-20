@@ -208,26 +208,27 @@ def word_number(m):
 ctx.keymap(
     {
         # meta
-        "(save it | sage)": Key("cmd-s"),
-        "(undo it | dizzle)": Key("cmd-z"),
-        "(redo it | rizzle)": Key("cmd-shift-z"),
+        "gogo (save | sage)": Key("cmd-s"),
+        "gogo (undo | dizzle)": Key("cmd-z"),
+        "gogo (redo | rizzle)": Key("cmd-shift-z"),
         # clipboard
-        "(clip cut | snatch)": Key("cmd-x"),
-        "(clip copy | stoosh)": Key("cmd-c"),
-        "(clip paste | spark)": Key("cmd-v"),
-        "(clip paste preserve formatting | match spark)": Key("cmd-shift-alt-v"),
+        "gogo (cut | snatch)": Key("cmd-x"),
+        "gogo (copy | stoosh)": Key("cmd-c"),
+        "gogo (paste | spark)": Key("cmd-v"),
+        "gogo paste clip": Key("cmd-shift-v"),
+        "gogo (paste match)": Key("cmd-shift-alt-v"),
         # motions
-        "([go] word left | fame)": Key("alt-left"),
-        "([go] word right | fish)": Key("alt-right"),
-        "([go] line after end)": Key("cmd-right space"),
-        "([go] line start | lefty)": Key("cmd-left"),
-        "([go] line end | ricky)": Key("cmd-right"),
-        "([go] line before end | smear)": Key("cmd-right left"),
+        "gogo (word left | fame)": Key("alt-left"),
+        "gogo (word right | fish)": Key("alt-right"),
+        "gogo (line after end)": Key("cmd-right space"),
+        "gogo (line start | lefty)": Key("cmd-left"),
+        "gogo (line end | ricky)": Key("cmd-right"),
+        "gogo (line before end | smear)": Key("cmd-right left"),
         # insertions
-        "([insert] line break | sky turn)": Key("shift-enter"),
-        "([insert] new line below | slap)": Key("cmd-right enter"),
-        "([insert] new line above | shocker)": Key("ctrl-a cmd-left enter up"),
-        "([insert] duplicate line | jolt)": Key(
+        "gogo ([insert] line break | sky turn)": Key("shift-enter"),
+        "gogo ([insert] new line below | slap)": Key("cmd-right enter"),
+        "gogo ([insert] new line above | shocker)": Key("ctrl-a cmd-left enter up"),
+        "gogo ([insert] duplicate line | jolt)": Key(
             "ctrl-a cmd-left shift-down cmd-c down cmd-v"
         ),
         # deleting

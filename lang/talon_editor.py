@@ -10,7 +10,7 @@ from ..utils import parse_words, text, is_filetype, paste_text, insert
 
 FILETYPES = (".py",)
 
-ctx = Context("talon_editor", func=is_filetype(FILETYPES))
+ctx = Context("talon_editor")
 
 
 def make_key(function_name="Key"):
@@ -61,7 +61,7 @@ ctx.keymap(
     {
         "key {basic_keys.modifiers}* {basic_keys.keymap}": make_key("Key"),
         "press {basic_keys.modifiers}* {basic_keys.keymap}": make_key("press"),
-        "talon map <dgndictation>": ("'", text, "': ,", Key("left")),
+        "talon map": ['"": ,', Key("left left left left")],
         "talon map string <dgndictation>": format_text("'{0}': '{0}',"),
         "dragon dictation": "<dgndictation>",
         "stir": ["Str()(None)"] + [Key("left")] * 7,

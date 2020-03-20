@@ -10,9 +10,7 @@ from ..utils import (
     is_filetype,
 )
 
-JS_EXTENSIONS = (".js", ".jsx")
-
-context = Context("javascript", func=is_filetype(JS_EXTENSIONS))
+context = Context("javascript")
 
 
 def remove_spaces_around_dashes(m):
@@ -29,11 +27,10 @@ def CursorText(s):
 
 context.keymap(
     {
-        "tip bool": "bool",
+        "code boo": "bool",
         "not equals undefined": " !== 'undefined'",
         # variables 
         "const": "const ",
-        "let": "let",
         "static": "static ",
         # functions
         "state func": "function ",
@@ -41,24 +38,30 @@ context.keymap(
         "state constructor": "constructor ",
         "state goto": "goto ",
         "state import": "import ",
-        "state from": ["from '';", Key("left left")],
+        "state from": [" from '';", Key("left left")],
         "state class": "class ",
         "state extends": "extends ",
-        "state super": "super",
+        "state super": "super();",
         "comment js": "// ",
-        "asink": " async ",
+        "refill asink": " async ",
         # console snippets
         "console log": ["console.log();", Key("left left")],
         "console error": ["console.error();", Key("left left")],
         "console warn": ["console.warn();", Key("left left")],
         # commands for react
-        "react import": "import React from 'react';",
-        "react tag": ["< />", Key("left left left")],
-        "react clack": "onClick",
-        "react component": ["React.Component ", Key("left")],
-        "react fragment": ["React.Fragment ", Key("left")],
-        "component": "Component",
-        "fragment": "Fragment",
+        "refill import": "import React from 'react';",
+        "refill in line": ["< />", Key("left left left")],
+        "refill open": ["<>", Key("left")],
+        "refill closed": ["</>", Key("left")],
+        "refill clack": "onClick",
+        "refill component": [" extends React.Component {}", Key("left enter enter up tab")],
+        "refill simple component": [" extends React.Component {}", Key("left enter enter up tab")],
+        "refill fragment": ["<React.Fragment></React.Fragment>", Key("escape b b b b a")],
+        "refill simple fragment": ["<Fragment></Fragment>", Key("escape b b a")],
         "document render": ["ReactDOM.render()", Key("left")],
+        "refill class name set": [" className={}", Key("left")],
+        "refill class name import": "import classnames from 'classnames';",
+        "refill prop types set": [".propTypes = {};", Key("left left enter enter up tab")],
+        "refill prop types import": "import PropTypes from 'prop-types';",
     }
 )

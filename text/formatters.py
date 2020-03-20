@@ -1,4 +1,4 @@
-from talon.voice import Word, Context, press
+from talon.voice import Word, Context, press, Key
 from talon import clip
 
 from ..utils import (
@@ -100,7 +100,7 @@ formatters = normalise_keys(
             True,
             lambda i, word, _: "@" + word if i == 0 else word.capitalize(),
         ),
-        "(criff | criffed)": (True, lambda i, word, _: word.capitalize()),
+        "(cliff | criff | criffed)": (True, lambda i, word, _: word.capitalize()),
         "tridal": (False, lambda i, word, _: word.capitalize()),
         "snake": (True, lambda i, word, _: word if i == 0 else "_" + word),
         "private": (True, lambda i, word, _: "_" + word),

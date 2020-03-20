@@ -10,7 +10,7 @@ keymap = {
     "(bang | exclamation point | clamor)": "!",
     "(doll | dollar [sign] | dolly)": "$",
     "(under score | downscore | crunder)": "_",
-    "(colon | cold | coal)": ":",
+    "colon": ":",
     "(lparen | [left] paren | precorp )": "(",
     "(rparen | are paren | right paren | precose)": ")",
     "(brace | left brace | kirksorp)": "{",

@@ -11,7 +11,7 @@ from .bundle_groups import FILETYPE_SENSITIVE_BUNDLES, TERMINAL_BUNDLES
 
 VIM_IDENTIFIER = "(Vim)"
 INCLUDE_TEENS_IN_NUMERALS = False
-INCLUDE_TENS_IN_NUMERALS = False
+INCLUDE_TENS_IN_NUMERALS = True 
 
 # mapping = json.load(open(os.path.join(os.path.dirname(__file__), "replace_words.json")))
 mapping = json.load(resource.open("replace_words.json"))
@@ -226,7 +226,7 @@ def text_to_range(words, delimiter="until"):
 
 number_conversions = {"oh": "0"}  # 'oh' => zero
 for i, w in enumerate(
-    ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
 ):
     number_conversions[str(i)] = str(i)
     number_conversions[w] = str(i)

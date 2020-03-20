@@ -10,9 +10,7 @@ from ..utils import (
     is_filetype,
 )
 
-FILETYPES = (".html", ".jsx", ".erb")
-
-context = Context("html", func=is_filetype(FILETYPES))
+context = Context("html")
 
 
 def remove_spaces_around_dashes(m):
@@ -81,6 +79,8 @@ context.keymap(
             ">",
             Key("alt-left alt-left left left"),
         ],
+        "(tag | ellie) new open": ["<>", Key("left")],
+        "(tag | ellie) new closed": ["</>", Key("left")],
         "(tag | ellie) html": CursorText("<html>{.}</html>"),
         "(tag | ellie) title": CursorText("<title>{.}</title>"),
         "(tag | ellie) head": CursorText("<head>{.}</head>"),
@@ -97,12 +97,13 @@ context.keymap(
         "(tag | ellie) footer": CursorText("<footer>{.}</footer>"),
         "(tag | ellie) open footer": "<footer>",
         "(tag | ellie) close footer": "</footer>",
-        "(tag | ellie) div": CursorText("<div>{.}</div>"),
-        "(tag | ellie) open div": "<div>",
-        "(tag | ellie) close div": "</div>",
+        "(tag | ellie) dive ": CursorText("<div>{.}</div>"),
+        "(tag | ellie) open dive": "<div>",
+        "(tag | ellie) close dive": "</div>",
         "(tag | ellie) span": CursorText("<span>{.}</span>"),
         "(tag | ellie) open span": "<span>",
         "(tag | ellie) close span": "</span>",
+        "(tag | ellie) form": CursorText("<form>{.}</form>"),
         "(tag | ellie) table": CursorText("<table>{.}</table>"),
         "(tag | ellie) table head": CursorText("<thead>{.}</thead>"),
         "(tag | ellie) table body": CursorText("<tbody>{.}</tbody>"),

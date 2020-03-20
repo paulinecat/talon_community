@@ -15,15 +15,15 @@ f_keys = {f"F {i}": f"f{i}" for i in range(1, 13)}
 
 simple_keys = normalise_keys(
     {
-        "(left | el | well | L)": "left",
-        "(right | are | arr | ar | R)": "right",
-        "( jeep | up )": "up",
+        "let": "left",
+        "right": "right",
+        "( jeep )": "up",
         "( dune | doom | down )": "down",
         "( backspace | junk )": "backspace",
         "(delete | forward delete | scrap | spunk)": "delete",
         "(space | skoosh)": "space",
         "(tap | tab | tarp)": "tab",
-        "( yeah | enter | shock )": "enter",
+        "( enter | shock )": "enter",
         "( escape | cape )": "escape",
     }
 )
@@ -44,7 +44,7 @@ symbols = normalise_keys(
         "(slash | forward slash)": "/",
         "backslash": "\\",
         "(minus | dash)": "-",
-        "(equals | smaqual)": "=",
+        "(equal | eco))": "=",
     }
 )
 
@@ -53,7 +53,7 @@ modifiers = normalise_keys(
         "cam": "cmd",
         "(control | troll)": "ctrl",
         "(shift | sky)": "shift",
-        "(alt | option)": "alt",
+        "alt": "alt",
     }
 )
 
@@ -62,10 +62,10 @@ keys.update(f_keys)
 keys.update(simple_keys)
 keys.update(symbols)
 
-digits = {str(i): str(i) for i in range(10)}
+digits = {str(i): str(i) for i in range(11)}
 
 # separate arrow dictionary for combining with modifiers
-arrows = {"left": "left", "right": "right", "up": "up", "down": "down"}
+arrows = {"let": "left", "right": "right", "up": "up", "down": "down"}
 
 # map alnum and keys separately so engine gives priority to letter/number repeats
 keymap = keys.copy()
